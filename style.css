@@ -669,7 +669,7 @@ body.tema-claro .rodape a:hover {
     display: none !important;
   }
 }
-/* Botões flutuantes organizados */
+/* BOTÕES FLUTUANTES */
 .botoes-fixos {
   position: fixed;
   right: 20px;
@@ -680,7 +680,6 @@ body.tema-claro .rodape a:hover {
   gap: 10px;
   z-index: 1000;
 }
-
 .botao-tema,
 .btn-topo {
   background-color: #1e3a8a;
@@ -694,26 +693,24 @@ body.tema-claro .rodape a:hover {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 .botao-tema:hover,
 .btn-topo:hover {
   background-color: #2563eb;
 }
-
 .btn-topo {
   display: none;
   text-align: center;
 }
-
-/* Responsividade no celular */
 @media (max-width: 480px) {
   .botoes-fixos {
-    right: 15px;
-    bottom: 15px;
+    right: 12px;
+    bottom: 12px;
     gap: 8px;
   }
-
   .botao-tema,
   .btn-topo {
     font-size: 0.85rem;
