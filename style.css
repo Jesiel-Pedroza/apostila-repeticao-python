@@ -664,4 +664,9 @@ body.tema-claro .rodape a:hover {
 .btn-copiar {
   margin-top: 0.75rem;
 }
+@media (max-width: 480px) {
+  .btn-copiar {
+    display: none !important;
+  }
+}
 
