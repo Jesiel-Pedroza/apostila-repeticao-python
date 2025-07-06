@@ -669,64 +669,55 @@ body.tema-claro .rodape a:hover {
     display: none !important;
   }
 }
-/* Contêiner fixo para os botões flutuantes */
+/* Botões flutuantes organizados */
 .botoes-fixos {
   position: fixed;
   right: 20px;
   bottom: 20px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 10px;
   z-index: 1000;
-  align-items: flex-end;
 }
 
-/* Botão de tema */
-.botao-tema {
+.botao-tema,
+.btn-topo {
   background-color: #1e3a8a;
   color: white;
   padding: 10px 14px;
   font-size: 0.9rem;
   border-radius: 10px;
   border: none;
+  text-decoration: none;
+  font-weight: bold;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: background 0.3s;
 }
-.botao-tema:hover {
+
+.botao-tema:hover,
+.btn-topo:hover {
   background-color: #2563eb;
 }
 
-/* Botão voltar ao topo */
 .btn-topo {
-  background: #1e3a8a;
-  color: white;
-  padding: 10px 14px;
-  font-size: 0.9rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   display: none;
   text-align: center;
-  transition: background 0.3s;
-}
-.btn-topo:hover {
-  background: #2563eb;
 }
 
-/* Responsivo */
+/* Responsividade no celular */
 @media (max-width: 480px) {
-  .botao-tema,
-  .btn-topo {
-    font-size: 0.85rem;
-    padding: 9px 12px;
-    border-radius: 8px;
-  }
-
   .botoes-fixos {
     right: 15px;
     bottom: 15px;
     gap: 8px;
+  }
+
+  .botao-tema,
+  .btn-topo {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    border-radius: 8px;
   }
 }
