@@ -669,4 +669,43 @@ body.tema-claro .rodape a:hover {
     display: none !important;
   }
 }
+.botao-tema {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  padding: 10px 14px;
+  background-color: #1e40af;
+  color: white;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+.botao-tema:hover {
+  background-color: #2563eb;
+}
+
+.btn-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1e3a8a;
+  color: white;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: none;
+  z-index: 1000;
+}
+
+.btn-topo:hover {
+  background: #2563eb;
+}
 
