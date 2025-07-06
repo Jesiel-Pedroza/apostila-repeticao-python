@@ -1,0 +1,644 @@
+
+/* ====== [ESTILOS GERAIS] ====== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #0f172a;
+  color: #f9fafb;
+  line-height: 1.6;
+  background-image: url('fundo-apostila.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ====== [MODO CLARO] ====== */
+body.tema-claro {
+  background: #f8fafc;
+  color: #1e293b;
+  background-image: none;
+}
+
+body.tema-claro .navbar,
+body.tema-claro .menu-container,
+body.tema-claro .cabecalho-exercicio,
+body.tema-claro .indice,
+body.tema-claro .exercicio,
+body.tema-claro main section,
+body.tema-claro .resposta {
+  background: #ffffff !important;
+  color: #1e293b !important;
+}
+
+body.tema-claro pre,
+body.tema-claro code {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+body.tema-claro .menu a {
+  color: #1e3a8a !important;
+}
+
+body.tema-claro .menu a:hover {
+  background-color: #e0e7ff;
+  color: #1e40af;
+}
+
+body.tema-claro .rodape {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+body.tema-claro .rodape a {
+  color: #1e40af !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+body.tema-claro .rodape a:hover {
+  color: #2563eb !important;
+  text-decoration: underline;
+}
+
+body.tema-claro * {
+  opacity: 1 !important;
+}
+
+main section {
+  background: rgba(15, 23, 42, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 1.5rem auto;
+  max-width: 900px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+h1, h2, h3 {
+  color: #f8fafc;
+  padding: 1rem 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+h1::before, h2::before, h3::before {
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
+}
+
+h1::before {
+  background-image: url('icon-book.png');
+}
+
+h2::before {
+  background-image: url('icon-section.sgv');
+}
+
+h3::before {
+  background-image: url('icon-snippet.sgv');
+  width: 20px;
+  height: 20px;
+}
+
+pre, code {
+  background: #1e293b;
+  color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  display: block;
+  overflow-x: auto;
+  font-family: monospace;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Botão copiar */
+.btn-copiar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #1e40af;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.btn-copiar:hover {
+  background: #2563eb;
+}
+
+/* Botão tema */
+.botao-tema {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  padding: 10px 12px;
+  background-color: #1e40af;
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.botao-tema:hover {
+  background-color: #2563eb;
+}
+
+/* Exercícios */
+.exercicio {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f8fafc;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  border-left: 4px solid #10b981;
+  border-radius: 6px;
+  max-width: 900px;
+}
+
+.resposta {
+  display: none;
+  background: #dbeafe;
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+  border-left: 3px solid #0ea5e9;
+  border-radius: 4px;
+  color: #1e293b;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+  font-family: monospace;
+  border-radius: 5px;
+  border: 1px solid #94a3b8;
+  box-sizing: border-box;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+.feedback {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #f1f5f9;
+}
+
+footer {
+  text-align: center;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-voltar {
+  padding: 0.4rem 0.8rem;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: #3b4bbd;
+}
+
+/* Menu principal estilizado */
+.cabecalho {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.menu-container {
+  background-color: #1e3a8a;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo img {
+  height: 35px;
+}
+
+.menu {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 10px;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background-color: #2e53c1;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #1e3a8a;
+    margin-top: 10px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  h1, h2 {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  textarea {
+    font-size: 1rem;
+  }
+
+  .exercicio {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  main section {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .exercicio {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  textarea {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Botão voltar ao topo */
+.btn-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1e3a8a;
+  color: white;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: none;
+  z-index: 1000;
+}
+
+.btn-topo:hover {
+  background: #2563eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Índice lateral fixo */
+.indice {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  width: 120px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background-color: rgba(30, 41, 59, 0.95);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  color: #f8fafc;
+  z-index: 999;
+  transition: transform 0.3s ease-in-out;
+}
+
+.indice:hover {
+  transform: scale(1.03);
+}
+
+.indice ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.indice li {
+  margin-bottom: 0.5rem;
+}
+
+.indice a {
+  color: #a5f3fc;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 6px 10px;
+  border-radius: 5px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.indice a:hover,
+.indice a.ativo {
+  background: #0ea5e9;
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* Sessão praticar */
+.praticar {
+  background-color: rgba(30, 41, 59, 0.95);
+  color: #f8fafc;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 850px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  font-size: 1.1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.praticar h2 {
+  margin-bottom: 1rem;
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.praticar a {
+  color: #38bdf8;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.praticar a:hover {
+  text-decoration: underline;
+}
+
+.rodape {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
+
+.rodape a {
+  color: #93c5fd;
+  text-decoration: none;
+  margin: 0 0.4rem;
+  transition: color 0.2s;
+}
+
+.rodape a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+/* Cabeçalho da página de exercícios */
+.cabecalho-exercicio {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(30, 64, 175, 0.95);
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.menu-exercicio {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.logo img {
+  height: 96px;
+}
+
+.btn-voltar-header {
+  background: #3b82f6;
+  color: white;
+  padding: 0.5rem 0.9rem;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+.btn-voltar-header:hover {
+  background: #2563eb;
+}
+
+.bloco-codigo {
+  position: relative;
+}
+
+.copiar-codigo {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-top: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.2s ease-in-out;
+}
+
+.copiar-codigo:hover {
+  background: #059669;
+}
+body.tema-claro main section,
+body.tema-claro .bloco,
+body.tema-claro .card,
+body.tema-claro .caixa,
+body.tema-claro .conteudo,
+body.tema-claro .descricao,
+body.tema-claro .explicacao {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+}
+
+body.tema-claro h1,
+body.tema-claro h2,
+body.tema-claro h3,
+body.tema-claro h4,
+body.tema-claro h5,
+body.tema-claro h6 {
+  color: #1e293b !important;
+}
+/* Aplicar cores claras apenas ao texto geral (parágrafos, spans, etc) */
+body.tema-claro p,
+body.tema-claro li,
+body.tema-claro span,
+body.tema-claro div,
+body.tema-claro main,
+body.tema-claro section,
+body.tema-claro article {
+  color: #1e293b !important;
+  opacity: 1 !important;
+}
+
+/* Rodapé com fundo claro e textos escuros visíveis */
+body.tema-claro .rodape {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+body.tema-claro .rodape a {
+  color: #1e40af !important;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+body.tema-claro .rodape a:hover {
+  color: #2563eb !important;
+  text-decoration: underline;
+}
+
+body.tema-claro .rodape {
+  background-color: #e2e8f0; /* fundo cinza claro */
+  color: #1e293b; /* texto visível */
+}
+
+body.tema-claro .rodape a {
+  color: #1e40af !important; /* azul forte */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+body.tema-claro .rodape a:hover {
+  color: #2563eb !important;
+  text-decoration: underline;
+}
+

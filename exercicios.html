@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apostila: Estruturas de Repetição</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="topo">
+  <aside class="indice">
+  <ul id="lista-exercicios"></ul>
+  </aside>
+
+  <header class="cabecalho-exercicio">
+  <div class="menu-exercicio">
+    <div class="logo">
+      <img src="logo.png" alt="Logo da Apostila">
+      
+    </div>
+    <a href="index.html" class="btn-voltar-header">⬅ Voltar</a>
+  </div>
+</header>
+
+<button class="botao-tema" onclick="alternarTema()">🌓 Tema</button>
+
+  <main>
+    <section>
+      <h2>Exercícios Práticos <span style="font-weight: normal;">(20 exercícios)</span></h2>
+
+      <!-- Aqui serão inseridos os blocos de exercícios de ex01 a ex20 -->
+      <!-- Cada div abaixo deve conter id="ex01" até id="ex20" -->
+      <!-- Exemplo do primeiro exercício abaixo -->
+
+      <div class="exercicio" id="ex01">
+        <strong>01:</strong> Faça um programa que peça uma nota entre zero e dez. Continue pedindo até que o valor seja válido.
+        <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+        <button class="verificar" onclick="verificarResposta(this)" data-resposta="nota = float(input('Escreva uma nota: '))\nwhile nota < 0 or nota > 10:\n  nota = float(input('Digite uma nota entre 0 e 10: '))\n  if nota < 0 or nota > 10:\n    print('Valor inválido! A nota deve estar entre 0 e 10.')\nprint(f'Nota válida: {nota}')">Verificar</button>
+        <p class="feedback"></p>
+        <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+        <div class="resposta">
+          <pre><code>nota = float(input("Escreva uma nota: "))
+
+while nota < 0 or nota > 10:
+    nota = float(input("Digite uma nota entre 0 e 10: "))
+    if nota < 0 or nota > 10:
+        print("Valor inválido! A nota deve estar entre 0 e 10.")
+
+print(f"Nota válida: {nota}")</code></pre>
+        </div>
+      
+
+      </div>
+
+    <div class="exercicio"id="ex02">
+      <strong>02:</strong> Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário.
+      <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+      <button class="verificar" onclick="verificarResposta(this)" data-resposta="while True:\n  usuario = input('Usuário: ')\n  senha = input('Senha: ')\n  if usuario != senha:\n    print('Login válido.')\n    break\n  print('Erro: senha não pode ser igual ao nome do usuário.')">Verificar</button>
+      <p class="feedback"></p>
+      <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+      <div class="resposta">
+        <pre><code>while True:
+  usuario = input("Usuário: ")
+  senha = input("Senha: ")
+  if usuario != senha:
+    print("Login válido.")
+    break
+  print("Erro: senha não pode ser igual ao nome do usuário.")</code></pre>
+      </div>
+      
+
+    </div>
+
+    <div class="exercicio"id="ex03">
+      <strong>03:</strong> Escreva um programa que calcule a soma dos números inteiros de 1 a 100.
+      <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+      <button class="verificar" onclick="verificarResposta(this)" data-resposta="soma = 0\ni = 1\nwhile i <= 100:\n  soma += i\n  i += 1\nprint(soma)">Verificar</button>
+      <p class="feedback"></p>
+      <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+      <div class="resposta">
+        <pre><code>soma = 0
+i = 1
+while i <= 100:
+  soma += i
+  i += 1
+print(soma)</code></pre>
+      </div>
+      
+
+    </div>
+
+    <div class="exercicio"id="ex04">
+      <strong>04:</strong> Escreva um programa que imprima a tabuada de 5 (de 1 até 10).
+      <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+      <button class="verificar" onclick="verificarResposta(this)" data-resposta="for i in range(1, 11):\n  print(f'5 x {i} = {5*i}')">Verificar</button>
+      <p class="feedback"></p>
+      <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+      <div class="resposta">
+        <pre><code>for i in range(1, 11):
+  print(f"5 x {i} = {5*i}")</code></pre>
+      </div>
+      
+
+    </div>
+
+    <div class="exercicio"id="ex05">
+      <strong>05:</strong> Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
+      <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+      <button class="verificar" onclick="verificarResposta(this)" data-resposta="for i in range(1, 51):\n  if i % 2 != 0:\n    print(i)">Verificar</button>
+      <p class="feedback"></p>
+      <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+      <div class="resposta">
+        <pre><code>for i in range(1, 51):
+  if i % 2 != 0:
+    print(i)</code></pre>
+      </div>
+      
+
+    </div>
+    <!-- Exercício 06 -->
+    <div class="exercicio"id="ex06">
+      <strong>06:</strong> Receba dois números inteiros e exiba todos os números no intervalo entre eles.
+      <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+      <button class="verificar" onclick="verificarResposta(this)" data-resposta="inicio = int(input('Digite o primeiro número: '))\nfim = int(input('Digite o segundo número: '))\nfor i in range(min(inicio, fim)+1, max(inicio, fim)):\n  print(i)">Verificar</button>
+      <p class="feedback"></p>
+      <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+      <div class="resposta">
+        <pre><code>inicio = int(input("Digite o primeiro número: "))
+fim = int(input("Digite o segundo número: "))
+for i in range(min(inicio, fim)+1, max(inicio, fim)):
+  print(i)</code></pre>
+      </div>
+      
+
+    </div>
+
+    <!-- Exercício 07 -->
+    <div class="exercicio"id="ex07">
+      <strong>07:</strong> Peça o número de turmas e a quantidade de alunos por turma. Calcule e exiba a média de alunos por turma.
+      <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+      <button class="verificar" onclick="verificarResposta(this)" data-resposta="turmas = int(input('Quantas turmas? '))\ntotal = 0\nfor i in range(turmas):\n  alunos = int(input(f'Alunos na turma {i+1}: '))\n  total += alunos\nprint('Média:', total / turmas)">Verificar</button>
+      <p class="feedback"></p>
+      <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+      <div class="resposta">
+        <pre><code>turmas = int(input("Quantas turmas? "))
+total = 0
+for i in range(turmas):
+  alunos = int(input(f"Alunos na turma {i+1}: "))
+  total += alunos
+print("Média:", total / turmas)</code></pre>
+      </div>
+      
+
+    </div>
+
+    <!-- Exercício 08 -->
+    <div class="exercicio"id="ex08">
+      <strong>08:</strong> Leia 5 números e exiba o maior deles.
+      <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+      <button class="verificar" onclick="verificarResposta(this)" data-resposta="maior = None\nfor i in range(5):\n  num = int(input('Número: '))\n  if maior is None or num > maior:\n    maior = num\nprint('Maior número:', maior)">Verificar</button>
+      <p class="feedback"></p>
+      <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+      <div class="resposta">
+        <pre><code>maior = None
+for i in range(5):
+  num = int(input("Número: "))
+  if maior is None or num > maior:
+    maior = num
+print("Maior número:", maior)</code></pre>
+      </div>
+     
+
+    </div>
+
+    <!-- Exercício 09 -->
+    <div class="exercicio"id="ex09">
+      <strong>09:</strong> Faça um contador regressivo de 10 até 1 usando <code>while</code>.
+      <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+      <button class="verificar" onclick="verificarResposta(this)" data-resposta="n = 10\nwhile n > 0:\n  print(n)\n  n -= 1">Verificar</button>
+      <p class="feedback"></p>
+      <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+      <div class="resposta">
+        <pre><code>n = 10
+while n > 0:
+  print(n)
+  n -= 1</code></pre>
+      </div>
+      
+
+    </div>
+
+    <!-- Exercício 10 -->
+    <div class="exercicio"id="ex10">
+      <strong>10:</strong> Crie um programa que só termina quando o usuário digitar "sair".
+      <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+      <button class="verificar" onclick="verificarResposta(this)" data-resposta="while True:\n  comando = input('Digite algo (ou sair para encerrar): ')\n  if comando.lower() == 'sair':\n    break">Verificar</button>
+      <p class="feedback"></p>
+      <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+      <div class="resposta">
+        <pre><code>while True:
+  comando = input("Digite algo (ou sair para encerrar): ")
+  if comando.lower() == "sair":
+    break</code></pre>
+      </div>
+      
+
+    </div>
+
+    <!-- Continuação: Exercícios 11 a 15 -->
+
+<!-- Exercício 11 -->
+<div class="exercicio"id="ex11">
+  <strong>11:</strong> Imprima os números pares de 0 a 20 usando <code>while</code>.
+  <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+  <button class="verificar" onclick="verificarResposta(this)" data-resposta="n = 0\nwhile n <= 20:\n  if n % 2 == 0:\n    print(n)\n  n += 1">Verificar</button>
+  <p class="feedback"></p>
+  <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+  <div class="resposta">
+    <pre><code>n = 0
+while n <= 20:
+  if n % 2 == 0:
+    print(n)
+  n += 1</code></pre>
+  </div>
+  
+
+</div>
+
+<!-- Exercício 12 -->
+<div class="exercicio"id="ex12">
+  <strong>12:</strong> Faça um programa que leia 10 números e exiba quantos são positivos.
+  <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+  <button class="verificar" onclick="verificarResposta(this)" data-resposta="positivos = 0\nfor i in range(10):\n  n = int(input('Número: '))\n  if n > 0:\n    positivos += 1\nprint('Positivos:', positivos)">Verificar</button>
+  <p class="feedback"></p>
+  <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+  <div class="resposta">
+    <pre><code>positivos = 0
+for i in range(10):
+  n = int(input("Número: "))
+  if n > 0:
+    positivos += 1
+print("Positivos:", positivos)</code></pre>
+  </div>
+  
+
+</div>
+
+<!-- Exercício 13 -->
+<div class="exercicio"id="ex13">
+  <strong>13:</strong> Escreva um programa que leia números até que o usuário digite 0. Ao final, exiba a soma de todos os números digitados.
+  <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+  <button class="verificar" onclick="verificarResposta(this)" data-resposta="soma = 0\nwhile True:\n  n = int(input('Número: '))\n  if n == 0:\n    break\n  soma += n\nprint('Soma:', soma)">Verificar</button>
+  <p class="feedback"></p>
+  <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+  <div class="resposta">
+    <pre><code>soma = 0
+while True:
+  n = int(input("Número: "))
+  if n == 0:
+    break
+  soma += n
+print("Soma:", soma)</code></pre>
+  </div>
+ 
+
+</div>
+
+<!-- Exercício 14 -->
+<div class="exercicio"id="ex14">
+  <strong>14:</strong> Crie um programa que calcule o fatorial de um número informado pelo usuário.
+  <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+  <button class="verificar" onclick="verificarResposta(this)" data-resposta="n = int(input('Número: '))\nfat = 1\nfor i in range(1, n+1):\n  fat *= i\nprint('Fatorial:', fat)">Verificar</button>
+  <p class="feedback"></p>
+  <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+  <div class="resposta">
+    <pre><code>n = int(input("Número: "))
+fat = 1
+for i in range(1, n+1):
+  fat *= i
+print("Fatorial:", fat)</code></pre>
+  </div>
+  
+
+</div>
+
+<!-- Exercício 15 -->
+<div class="exercicio"id="ex15">
+  <strong>15:</strong> Escreva um programa que conte quantos números entre 1 e 100 são divisíveis por 3.
+  <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+  <button class="verificar" onclick="verificarResposta(this)" data-resposta="cont = 0\nfor i in range(1, 101):\n  if i % 3 == 0:\n    cont += 1\nprint('Divisíveis por 3:', cont)">Verificar</button>
+  <p class="feedback"></p>
+  <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+  <div class="resposta">
+    <pre><code>cont = 0
+for i in range(1, 101):
+  if i % 3 == 0:
+    cont += 1
+print("Divisíveis por 3:", cont)</code></pre>
+  </div>
+  
+
+</div>
+<!-- Continuação: Exercícios 16 a 20 -->
+
+<!-- Exercício 16 -->
+<div class="exercicio"id="ex16">
+  <strong>16:</strong> Escreva um programa que solicite 5 números e exiba quantos são pares.
+  <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+  <button class="verificar" onclick="verificarResposta(this)" data-resposta="pares = 0\nfor i in range(5):\n  n = int(input('Digite um número: '))\n  if n % 2 == 0:\n    pares += 1\nprint('Quantidade de pares:', pares)">Verificar</button>
+  <p class="feedback"></p>
+  <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+  <div class="resposta">
+    <pre><code>pares = 0
+for i in range(5):
+  n = int(input("Digite um número: "))
+  if n % 2 == 0:
+    pares += 1
+print("Quantidade de pares:", pares)</code></pre>
+  </div>
+ 
+
+</div>
+
+<!-- Exercício 17 -->
+<div class="exercicio"id="ex17">
+  <strong>17:</strong> Faça um programa que leia um número e informe se ele é primo.
+  <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+  <button class="verificar" onclick="verificarResposta(this)" data-resposta="n = int(input('Digite um número: '))\neh_primo = True\nif n <= 1:\n  eh_primo = False\nelse:\n  for i in range(2, int(n**0.5)+1):\n    if n % i == 0:\n      eh_primo = False\n      break\nprint('Primo:', eh_primo)">Verificar</button>
+  <p class="feedback"></p>
+  <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+  <div class="resposta">
+    <pre><code>n = int(input("Digite um número: "))
+eh_primo = True
+if n <= 1:
+  eh_primo = False
+else:
+  for i in range(2, int(n**0.5)+1):
+    if n % i == 0:
+      eh_primo = False
+      break
+print("Primo:", eh_primo)</code></pre>
+  </div>
+  
+
+</div>
+
+<!-- Exercício 18 -->
+<div class="exercicio"id="ex18">
+  <strong>18:</strong> Mostre a sequência de Fibonacci até o décimo termo.
+  <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+  <button class="verificar" onclick="verificarResposta(this)" data-resposta="a, b = 0, 1\nfor i in range(10):\n  print(a)\n  a, b = b, a + b">Verificar</button>
+  <p class="feedback"></p>
+  <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+  <div class="resposta">
+    <pre><code>a, b = 0, 1
+for i in range(10):
+  print(a)
+  a, b = b, a + b</code></pre>
+  </div>
+ 
+
+</div>
+
+<!-- Exercício 19 -->
+<div class="exercicio"id="ex19">
+  <strong>19:</strong> Leia uma lista de 5 nomes e exiba-os um por um.
+  <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+  <button class="verificar" onclick="verificarResposta(this)" data-resposta="nomes = []\nfor i in range(5):\n  nomes.append(input('Digite um nome: '))\nfor nome in nomes:\n  print(nome)">Verificar</button>
+  <p class="feedback"></p>
+  <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+  <div class="resposta">
+    <pre><code>nomes = []
+for i in range(5):
+  nomes.append(input("Digite um nome: "))
+for nome in nomes:
+  print(nome)</code></pre>
+  </div>
+  
+
+</div>
+
+<!-- Exercício 20 -->
+<div class="exercicio"id="ex20">
+  <strong>20:</strong> Faça um programa que peça números ao usuário até que a soma deles seja maior que 100.
+  <textarea rows="6" placeholder="Digite seu código aqui..."></textarea>
+  <button class="verificar" onclick="verificarResposta(this)" data-resposta="soma = 0\nwhile soma <= 100:\n  n = int(input('Digite um número: '))\n  soma += n\nprint('Soma final:', soma)">Verificar</button>
+  <p class="feedback"></p>
+  <button onclick="toggleResposta(this)">Mostrar Resposta</button>
+  <div class="resposta">
+    <pre><code>soma = 0
+while soma <= 100:
+  n = int(input("Digite um número: "))
+  soma += n
+print("Soma final:", soma)</code></pre>
+  </div>
+  
+</div>
+
+
+  </section>
+
+
+
+  <footer>
+  <div class="social">
+    <a href="https://twitter.com/seuperfil" target="_blank">Twitter</a> |
+    <a href="https://instagram.com/seuperfil" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/seuperfil" target="_blank">Facebook</a>
+  </div>
+  <p>&copy; 2025 — Desenvolvido por Jesiel Pedroza • 
+    <a href="https://jespedsys.com.br" target="_blank">jespedsys.com.br</a>
+  </p>
+</footer>
+
+<!-- Botão voltar ao topo -->
+<a href="#topo" class="btn-topo" aria-label="Voltar ao topo">🔝</a>
+
+<script src="script.js"></script>
+<script>
+  const links = document.querySelectorAll('.navbar a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    document.querySelectorAll('main section').forEach(section => {
+      const top = window.scrollY;
+      const offset = section.offsetTop - 150;
+      if (top >= offset) {
+        current = section.getAttribute('id');
+      }
+    });
+    links.forEach(link => {
+      link.classList.remove('ativo');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('ativo');
+      }
+    });
+
+    // Mostrar botão topo
+    const btnTopo = document.querySelector('.btn-topo');
+    btnTopo.style.display = window.scrollY > 200 ? 'block' : 'none';
+  });
+   // animação ao clicar no índice
+  const linksIndice = document.querySelectorAll('.indice a');
+  linksIndice.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const destino = document.querySelector(this.getAttribute('href'));
+      destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // feedback ativo visual
+      linksIndice.forEach(l => l.classList.remove('ativo'));
+      this.classList.add('ativo');
+    });
+  });
+
+  // animação botão topo
+  const btnTopo = document.querySelector('.btn-topo');
+  window.addEventListener('scroll', () => {
+    btnTopo.style.display = window.scrollY > 200 ? 'block' : 'none';
+
+    // marca o índice ativo
+    let scrollPosition = window.scrollY + 100;
+    document.querySelectorAll('.exercicio').forEach((section, index) => {
+      const id = section.getAttribute('id');
+      if (section.offsetTop <= scrollPosition) {
+        linksIndice.forEach(link => link.classList.remove('ativo'));
+        const currentLink = document.querySelector(`.indice a[href="#${id}"]`);
+        if (currentLink) currentLink.classList.add('ativo');
+      }
+    });
+  });
+</script>
+</body>
+</html>

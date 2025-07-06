@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apostila: Estruturas de Repetição</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="cabecalho">
+  <div class="menu-container">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo da Apostila">
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+      <ul class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#oque">O que são</a></li>
+        <li><a href="#importancia">Importância</a></li>
+        <li><a href="#exemplos">Exemplos</a></li>
+        <li><a href="#comparacao">While vs For</a></li>
+        <li><a href="exercicios.html">Exercícios</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+  <main>
+    <section id="introducao">
+      <h1> Estruturas de Repetição em Python</h1>
+      <p>👋 Bem-vindo à sua jornada de aprendizado em programação com <strong>Python</strong>!</p>
+      <p>Nesta apostila interativa, você vai entender um dos pilares da lógica de programação: as <strong>estruturas de repetição</strong>.</p>
+      <p>Com elas, conseguimos automatizar tarefas, criar laços de execução e construir sistemas muito mais eficientes.</p>
+      <p><strong>Vamos começar?</strong> 🚀✨</p>
+    </section>
+
+    <section id="oque-e">
+      <h2>🔄 O que são?</h2>
+      <p>As <strong>estruturas de repetição</strong> permitem executar um bloco de código várias vezes, de forma controlada.</p>
+      <ul>
+        <li>🔁 <strong><code>while</code></strong>: repete enquanto uma condição for verdadeira.</li>
+        <li>📚 <strong><code>for</code></strong>: percorre uma sequência (como listas ou intervalos).</li>
+      </ul>
+      <p>Essas estruturas são fundamentais para automatizar processos, como percorrer listas, validar entradas ou executar cálculos.</p>
+    </section>
+
+    <section id="importancia">
+      <h2>💡 Por que usar?</h2>
+      <ul>
+        <li>🔁 Automatiza tarefas repetitivas e manuais.</li>
+        <li>🧹 Torna o código mais limpo e legível.</li>
+        <li>⚡ Economiza tempo e melhora a performance.</li>
+        <li>🧠 Permite criar soluções inteligentes e adaptáveis.</li>
+      </ul>
+      <p>Imagine ter que digitar a mesma instrução 100 vezes. Com uma estrutura de repetição, isso vira apenas 3 linhas de código!</p>
+    </section>
+
+    <section id="exemplos">
+      <h2>👨‍💻 Exemplos Explicados</h2>
+
+      <h3>🔂 Exemplo com <code>while</code>:</h3>
+      <p>Repete enquanto a condição for verdadeira:</p>
+      <pre><code>contador = 1
+while contador <= 5:
+  print("Contando:", contador)
+  contador += 1</code></pre>
+
+      <h3>🔁 Exemplo com <code>for</code>:</h3>
+      <p>Percorre um intervalo definido:</p>
+      <pre><code>for i in range(1, 6):
+  print(i)</code></pre>
+
+      <h3>➕ Exemplo com soma acumulada:</h3>
+      <pre><code>soma = 0
+for i in range(1, 11):
+  soma += i
+print("Soma:", soma)</code></pre>
+
+      <h3>🎯 Validação com <code>while</code>:</h3>
+      <pre><code>nota = -1
+while nota < 0 or nota > 10:
+  nota = float(input("Digite uma nota entre 0 e 10: "))
+print("Nota válida!", nota)</code></pre>
+    </section>
+
+    <section id="comparacao">
+      <h2>📊 Quando usar <code>while</code> ou <code>for</code>?</h2>
+      <table>
+        <tr><th>Situação</th><th>while</th><th>for</th></tr>
+        <tr><td>Condição incerta (ex: até digitar "sair")</td><td>✔️</td><td></td></tr>
+        <tr><td>Laço com fim conhecido (ex: 10 vezes)</td><td></td><td>✔️</td></tr>
+        <tr><td>Validação de dados</td><td>✔️</td><td></td></tr>
+        <tr><td>Percorrer lista, string ou intervalo</td><td></td><td>✔️</td></tr>
+      </table>
+      <p><strong>Dica:</strong> Sempre que souber quantas vezes o laço deve ocorrer, prefira o <code>for</code>. Caso contrário, use <code>while</code>.</p>
+    </section>
+
+    <section class="praticar">
+  <h2>🧪 <strong>Quer praticar?</strong></h2>
+  <p>
+    Acesse a nossa página de 
+    <a href="exercicios.html">Exercícios Interativos</a> e coloque seu conhecimento em ação! 💻🧠
+  </p>
+</section>
+
+  </main>
+
+  <footer class="rodape">
+  <div class="social-icons">
+    <a href="https://twitter.com" target="_blank" title="Twitter">🐦</a>
+    <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
+    <a href="https://facebook.com" target="_blank" title="Facebook">📘</a>
+  </div>
+  <p>&copy; 2025 — Desenvolvido por <strong>Jesiel Pedroza</strong> • 
+     <a href="https://jespedsys.com.br" target="_blank">jespedsys.com.br</a></p>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
