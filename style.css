@@ -669,43 +669,64 @@ body.tema-claro .rodape a:hover {
     display: none !important;
   }
 }
-.botao-tema {
+/* Contêiner fixo para os botões flutuantes */
+.botoes-fixos {
   position: fixed;
-  bottom: 90px;
   right: 20px;
-  padding: 10px 14px;
-  background-color: #1e40af;
-  color: white;
-  font-size: 0.95rem;
-  border-radius: 8px;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   z-index: 1000;
-  transition: background 0.3s;
+  align-items: flex-end;
 }
 
+/* Botão de tema */
+.botao-tema {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background 0.3s;
+}
 .botao-tema:hover {
   background-color: #2563eb;
 }
 
+/* Botão voltar ao topo */
 .btn-topo {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
   background: #1e3a8a;
   color: white;
-  padding: 0.6rem 0.8rem;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  text-align: center;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  border-radius: 10px;
   text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   display: none;
-  z-index: 1000;
+  text-align: center;
+  transition: background 0.3s;
 }
-
 .btn-topo:hover {
   background: #2563eb;
 }
 
+/* Responsivo */
+@media (max-width: 480px) {
+  .botao-tema,
+  .btn-topo {
+    font-size: 0.85rem;
+    padding: 9px 12px;
+    border-radius: 8px;
+  }
+
+  .botoes-fixos {
+    right: 15px;
+    bottom: 15px;
+    gap: 8px;
+  }
+}
