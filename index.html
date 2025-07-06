@@ -8,25 +8,23 @@
 </head>
 <body>
   <header class="cabecalho">
-  <div class="menu-container">
-    <nav class="navbar">
-      <div class="logo">
-        <img src="logo.png" alt="Logo da Apostila">
-      </div>
-      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-      <ul class="menu">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#oque">O que são</a></li>
-        <li><a href="#importancia">Importância</a></li>
-        <li><a href="#exemplos">Exemplos</a></li>
-        <li><a href="#comparacao">While vs For</a></li>
-        <li><a href="exercicios.html">Exercícios</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
+    <div class="menu-container">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="logo.png" alt="Logo da Apostila">
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+        <ul class="menu">
+          <li><a href="#introducao">Início</a></li>
+          <li><a href="#oque-e">O que são</a></li>
+          <li><a href="#importancia">Importância</a></li>
+          <li><a href="#exemplos">Exemplos</a></li>
+          <li><a href="#comparacao">While vs For</a></li>
+          <li><a href="exercicios.html">Exercícios</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <main>
     <section id="introducao">
@@ -99,26 +97,51 @@ print("Nota válida!", nota)</code></pre>
     </section>
 
     <section class="praticar">
-  <h2>🧪 <strong>Quer praticar?</strong></h2>
-  <p>
-    Acesse a nossa página de 
-    <a href="exercicios.html">Exercícios Interativos</a> e coloque seu conhecimento em ação! 💻🧠
-  </p>
-</section>
-
+      <h2>🧪 <strong>Quer praticar?</strong></h2>
+      <p>
+        Acesse a nossa página de 
+        <a href="exercicios.html">Exercícios Interativos</a> e coloque seu conhecimento em ação! 💻🧠
+      </p>
+    </section>
   </main>
 
   <footer class="rodape">
-  <div class="social-icons">
-    <a href="https://twitter.com" target="_blank" title="Twitter">🐦</a>
-    <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
-    <a href="https://facebook.com" target="_blank" title="Facebook">📘</a>
-  </div>
-  <p>&copy; 2025 — Desenvolvido por <strong>Jesiel Pedroza</strong> • 
-     <a href="https://jespedsys.com.br" target="_blank">jespedsys.com.br</a></p>
-</footer>
+    <div class="social-icons">
+      <a href="https://twitter.com" target="_blank" title="Twitter">🐦</a>
+      <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
+      <a href="https://facebook.com" target="_blank" title="Facebook">📘</a>
+    </div>
+    <p>&copy; 2025 — Desenvolvido por <strong>Jesiel Pedroza</strong> • 
+       <a href="https://jespedsys.com.br" target="_blank">jespedsys.com.br</a></p>
+  </footer>
 
+  <!-- Botões flutuantes -->
+  <button class="botao-tema" onclick="alternarTema()">🌗 Tema</button>
+  <a href="#" class="btn-topo" id="btnTopo" title="Voltar ao Topo">⬆️ TOP</a>
 
   <script src="script.js"></script>
+  <script>
+    const links = document.querySelectorAll('.navbar a');
+    const btnTopo = document.querySelector('.btn-topo');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      document.querySelectorAll('main section').forEach(section => {
+        const top = window.scrollY;
+        const offset = section.offsetTop - 150;
+        if (top >= offset) {
+          current = section.getAttribute('id');
+        }
+      });
+      links.forEach(link => {
+        link.classList.remove('ativo');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('ativo');
+        }
+      });
+
+      btnTopo.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+  </script>
 </body>
 </html>
